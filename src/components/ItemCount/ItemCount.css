@@ -1,0 +1,56 @@
+
+.control{
+    /*width: 20px;
+    height: 20px;*/
+    margin: 10px 30px 10px 30px;    
+    padding: 5px 10px;
+    
+}
+
+.imagenCard{
+    width: 286px;
+    height: 180px;
+}
+
+.borde{
+    border: 1px solid black;
+    width: 15vw;
+    height: 22vh;
+}
+
+.fondoControl{
+    background-color: rgba(169, 169, 169, 0.514);
+    padding-bottom: 10px;
+}
+
+.fondoCard{
+    background-color: rgb(240, 184, 115);
+}
+
+.separacionCard{
+    margin: 20px;
+}
+
+/*.bordeControles{
+    border: 1px black solid;
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 150px;
+}*/
+
+/*.masMenos{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}*/
+
+.display{
+    width: 30px;
+    height: 20px;
+    margin-bottom: 100px;
+}
+
+.boton{
+    padding: 5px;
+}
