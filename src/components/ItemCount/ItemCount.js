@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import './ItemCount.css';
-import Card from 'react-bootstrap/Card';
+
 
 function ItemCount({ stock, initial, onAdd }) {
     const [count, setCount] = useState(initial);
@@ -23,7 +23,7 @@ function ItemCount({ stock, initial, onAdd }) {
     }
 
     function mostrar() {
-        if (cant > 0) {
+        if (count <= cant) {
             setCant(cant - count)
         } else {
             console.log("No hay suficiente cantidad para lo requerido")
@@ -31,24 +31,13 @@ function ItemCount({ stock, initial, onAdd }) {
     }
 
     return (
-        <div className='separacionCard'>
-            <Card style={{ width: '18rem' }}>
-                <Card.Img className='imagenCard' variant="top" src="/images/logo-Enlace-Util.jpg" />
-                <Card.Body className='fondoCard'>
-                    <Card.Title>Marcador x 10 surtidos</Card.Title>
-                    <Card.Text>$150.43</Card.Text>                    
-                    <div className='fondoControl'>
-                        <button className='control' onClick={restar}>-</button>
-                        <span className='display'>{count}</span>
-                        <button className='control' onClick={sumar}>+</button>
-                    </div>
-                    <div className='fondoControl' >
-                    <button className='boton' onClick={() => { onAdd(count, cant); mostrar() }}>Agregar al carrito</button>
-
-                    </div>
-                    
-                </Card.Body>
-            </Card>
+        <div>
+            <div className='fondoControl'>
+                <button className='control' onClick={restar}>-</button>
+                <span className='display'>{count}</span>
+                <button className='control' onClick={sumar}>+</button>
+            </div>
+            <button className='boton' onClick={() => { onAdd(count, cant); mostrar() }}>Agregar al carrito</button>
         </div>
     );
 };

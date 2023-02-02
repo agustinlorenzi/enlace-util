@@ -1,11 +1,8 @@
 
+import ItemCount from "./components/ItemCount/ItemCount";
+import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
+import NavBar from "./components/Navbar/Navbar";
 import './App.css';
-import ItemCount from './components/ItemCount/ItemCount';
-import Menu from './components/Navbar/Navbar';
-import ItemListContainer from './components/ItemListContainer/ItemListContainer';
-// import ItemCount from '/components/ItemCount';
-//import ItemListContainer from './components/ItemListContainer';
-//import Menu from './components/Navbar';
 
 function App() {
 
@@ -14,23 +11,18 @@ function App() {
   const initial = 1
 
   function onAdd(count, cant) {
-    if (cant > 0) {
-      console.log(count)
+    if (count <= cant) {
+      console.log("funcion on add "+count)
     }
-
   }
 
   return (
-    <div className="App">
-      
-      <Menu />
-       
+    <div className="App">      
+      <NavBar />       
       <ItemListContainer greeting={parrafo} />      
       <ItemCount stock={stock} initial={initial} onAdd={onAdd} />
     </div>
   );
 };
-
-
 
 export default App;

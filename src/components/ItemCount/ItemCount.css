@@ -25,6 +25,9 @@
 
 .fondoCard{
     background-color: rgb(240, 184, 115);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .separacionCard{
@@ -53,4 +56,5 @@
 
 .boton{
     padding: 5px;
+    margin: 5px 15px;
 }

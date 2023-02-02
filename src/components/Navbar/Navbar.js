@@ -1,11 +1,11 @@
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
-import CartWidget from './components/CartWidget/CartWidget';
-import './Navbar.css';
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+import NavDropdown from "react-bootstrap/NavDropdown";
+import CartWidget from "../CartWidget/CartWidget";
+import "./Navbar.css";
 
-function Menu() {
+function NavBar() {
     return (
         <Navbar className='color-navbar' expand="lg">
             <Container className='container'>
@@ -38,4 +38,4 @@ function Menu() {
     );
 }
 
-export default Menu;
+export default NavBar;
