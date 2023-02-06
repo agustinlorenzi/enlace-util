@@ -16,7 +16,7 @@ function NavBar() {
                         <Nav.Link href="#home"><span className='item-navbar'>Adhesivos</span></Nav.Link>
                         <Nav.Link href="#link"><span className='item-navbar'>Lapices</span></Nav.Link>
                         <NavDropdown className='item-navbar' title="Marcadores" id="basic-nav-dropdown">
-                            <NavDropdown.Item href="#action/3.1">Marcadores al Agua</NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.1">Marcadores de Pizarra</NavDropdown.Item>
                             <NavDropdown.Item href="#action/3.2">
                                 Marcadores Permanentes
                             </NavDropdown.Item>

@@ -37,7 +37,7 @@ function ItemCount({ stock, initial, onAdd }) {
                 <span className='display'>{count}</span>
                 <button className='control' onClick={sumar}>+</button>
             </div>
-            <button className='boton' onClick={() => { onAdd(count, cant); mostrar() }}>Agregar al carrito</button>
+            <button className='boton' onClick={() => { onAdd(count); mostrar() }}>Agregar al carrito</button>
         </div>
     );
 };

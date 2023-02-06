@@ -1,23 +1,23 @@
 import React from 'react'
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import "./Item.css";
 
-function Item({prod}) {
+function Item({ prod }) {
+
   return (
-    <div>
-        <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src={prod.foto} />
-      <Card.Body>
-        <Card.Title>Codigo {prod.id}</Card.Title>
-        <Card.Title>{prod.categoria}</Card.Title>
-        <Card.Title>Descrip. {prod.descripcion}</Card.Title>
-        <Card.Title>$ {prod.precio}</Card.Title>
-        <Card.Title>Card Title</Card.Title>
-
-        <Button variant="primary">Agregar</Button>
-      </Card.Body>
-    </Card>            
-
+    <div className="card">
+      <Card style={{ width: '18rem' }}>
+        <Card.Img style={{ height: '18rem' }} variant="top" src={prod.foto} />
+        <Card.Body>
+          <Card.Text>Codigo: {prod.id}.</Card.Text>
+          <Card.Title>{prod.nombre}.</Card.Title>
+          <Card.Text>Descripción: {prod.descripcion}</Card.Text>
+          <Card.Text>$ {prod.precio}</Card.Text>
+          <Card.Text>Stock: {prod.stock}</Card.Text>
+          <Button variant="primary">Ver Más</Button>
+        </Card.Body>
+      </Card>
     </div>
   )
 }

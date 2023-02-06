@@ -1,0 +1,13 @@
+* {
+    /* overflow-x: hidden; */
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.ordenCards{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+}
