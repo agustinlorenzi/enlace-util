@@ -26,7 +26,11 @@ function ItemListContainer({ greeting }) {
       {/* <ul>{productos.map(producto => (<li key={producto.id}>{producto.descripcion}</li>))}</ul> */}
       {/* {loading ? <h2>Cargando . . .</h2> : productos.map((<ItemList/>)) } */}
       {/* {loading ? <h2>Cargando . . .</h2> : productos.map((prod => <li key={prod.id}>{prod.descripcion}</li>)) } */}
-      {loading ? <h2>Cargando . . .</h2> : productos.map((prod => <p key={prod.id}>{<ItemList prod={prod} />}</p>)) }
+      <div className='control'>
+        {loading ? <h2>Cargando . . .</h2> : productos.map((prod => <p key={prod.id}>{<ItemList prod={prod} />}</p>))}
+
+      </div>
+
 
 
     </div>

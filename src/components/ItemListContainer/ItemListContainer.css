@@ -1,8 +1,16 @@
-.parrafo{
+.parrafo {
     margin: 20px;
     font-size: 20px;
     padding: 20px;
     background-color: rgba(255, 0, 0, 0.418);
     font-weight: 500;
     color: blue;
+}
+
+.control {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+   
 }

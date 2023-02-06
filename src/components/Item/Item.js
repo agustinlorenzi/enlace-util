@@ -6,8 +6,8 @@ import "./Item.css";
 function Item({ prod }) {
 
   return (
-    <div className="card">
-      <Card style={{ width: '18rem' }}>
+    <div >
+      <Card className="card" style={{ width: '18rem'}}>
         <Card.Img style={{ height: '18rem' }} variant="top" src={prod.foto} />
         <Card.Body>
           <Card.Text>Codigo: {prod.id}.</Card.Text>
