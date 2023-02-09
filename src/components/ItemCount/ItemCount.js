@@ -6,6 +6,11 @@ function ItemCount({ stock, initial, onAdd }) {
     const [count, setCount] = useState(initial);
     const [cant, setCant] = useState(stock);
 
+    /* console.log("en este lugar es: " + (stock + 1))
+     console.log("en este lugar initial es: " + (initial + 1))
+     console.log("la cantidad es: " + (cant))
+     console.log("count es " + (count + 1))*/
+
     useEffect(() => {
         console.log("el stock es " + cant)
     }, [cant])

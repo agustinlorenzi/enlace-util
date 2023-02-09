@@ -1,7 +1,7 @@
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import NavDropdown from "react-bootstrap/NavDropdown";
+import { Link, NavLink } from "react-router-dom";
 import CartWidget from "../CartWidget/CartWidget";
 import "./Navbar.css";
 
@@ -9,26 +9,16 @@ function NavBar() {
     return (
         <Navbar className='color-navbar' expand="lg">
             <Container className='container'>
-                <Navbar.Brand href="#home"><img src="/images/logo-Enlace-Util.jpg" alt="logo-enlace-util" className='logo'/></Navbar.Brand>
+                <Link to="/"><img src="/images/logo-Enlace-Util.jpg" alt="logo-enlace-util" className='logo' /></Link>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse className="justify-content-end" id="basic-navbar-nav">
                     <Nav className="ml-auto">
-                        <Nav.Link href="#home"><span className='item-navbar'>Adhesivos</span></Nav.Link>
-                        <Nav.Link href="#link"><span className='item-navbar'>Lapices</span></Nav.Link>
-                        <NavDropdown className='item-navbar' title="Marcadores" id="basic-nav-dropdown">
-                            <NavDropdown.Item href="#action/3.1">Marcadores de Pizarra</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.2">
-                                Marcadores Permanentes
-                            </NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.3">Marcadores Especiales</NavDropdown.Item>
-                            <NavDropdown.Divider />
-                            <NavDropdown.Item href="#action/3.4">
-                                Resaltadores
-                            </NavDropdown.Item>
-                        </NavDropdown>
+                        <NavLink to='/categoria/adhesivos' className='item-navbar'><span >Adhesivos</span></NavLink>
+                        <NavLink to='/categoria/lapices' className='item-navbar'><span >Lapices</span></NavLink>
+                        <NavLink to='/categoria/marcadores' className='item-navbar'><span >Marcadores</span></NavLink>                    
                         <div >
-                            <div>                                
-                                <CartWidget/>                               
+                            <div>
+                                <CartWidget />
                             </div>
                         </div>
                     </Nav>

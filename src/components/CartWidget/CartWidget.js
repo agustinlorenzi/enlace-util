@@ -6,7 +6,7 @@ function CartWidget() {
   return (
    <div className='carrito'>
         <p className='circulo'>1</p>
-        <h1> <BiCartAlt /></h1>      
+        <h1 > <BiCartAlt className='simboloCarrito'/></h1>      
     </div>
   )
 }

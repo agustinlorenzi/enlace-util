@@ -1,0 +1,43 @@
+.itemDetail{
+    border: 1px black solid;
+    width: 80vw;
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    overflow-y: hidden;
+    margin: 5px;
+    background-color: rgba(245, 186, 97, 0.664);
+    padding: 10px;
+}
+
+.itemDetail img{    
+    margin: 10px;
+    height: 50vh;
+}
+
+.sacar{
+    overflow-y: hidden;    
+}
+
+@media (min-width: 768px) {
+    .itemDetail{
+        width: 90vw;
+        flex-direction: row;
+        height: 70vh;
+        margin: 40px;
+        padding: 20px;
+
+    }
+
+    .itemDetail img{
+        width: 35vw;
+        height: auto;
+        padding-right: 50px;
+        
+        
+        
+    }
+}
