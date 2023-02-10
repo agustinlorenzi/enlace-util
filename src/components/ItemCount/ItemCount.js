@@ -1,18 +1,12 @@
 import { useEffect, useState } from 'react'
 import './ItemCount.css';
 
-
-function ItemCount({ stock, initial, onAdd }) {
-    const [count, setCount] = useState(initial);
+function ItemCount({ stock, initial, onAdd }) {    
     const [cant, setCant] = useState(stock);
-
-    /* console.log("en este lugar es: " + (stock + 1))
-     console.log("en este lugar initial es: " + (initial + 1))
-     console.log("la cantidad es: " + (cant))
-     console.log("count es " + (count + 1))*/
+    const [count, setCount] = useState(initial);    
 
     useEffect(() => {
-        console.log("el stock es " + cant)
+        console.log(`El stock que queda de este articulo es de ${cant} unidades.`)
     }, [cant])
 
     function sumar() {
@@ -30,6 +24,7 @@ function ItemCount({ stock, initial, onAdd }) {
     function mostrar() {
         if (count <= cant) {
             setCant(cant - count)
+            onAdd(count); 
         } else {
             console.log("No hay suficiente cantidad para lo requerido")
         }
@@ -42,10 +37,9 @@ function ItemCount({ stock, initial, onAdd }) {
                 <span className='display'>{count}</span>
                 <button className='control' onClick={sumar}>+</button>
             </div>
-            <button className='boton' onClick={() => { onAdd(count); mostrar() }}>Agregar al carrito</button>
+            <button className='boton' onClick={() => {mostrar()}}>Agregar al carrito</button>
         </div>
     );
 };
-
 
 export default ItemCount

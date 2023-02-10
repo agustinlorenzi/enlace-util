@@ -1,10 +1,7 @@
 
-.control{
-    /*width: 20px;
-    height: 20px;*/
+.control{    
     margin: 10px 30px 10px 30px;    
-    padding: 5px 10px;
-    
+    padding: 5px 10px;    
 }
 
 .imagenCard{
@@ -37,25 +34,10 @@
     margin: 20px;
 }
 
-/*.bordeControles{
-    border: 1px black solid;
-    display: flex;
-    flex-direction: column;
-    width: 200px;
-    height: 150px;
-}*/
-
-/*.masMenos{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}*/
-
 .display{
     width: 30px;
     height: 20px;
-    overflow-y: hidden;
-    /* margin-bottom: 100px; */
+    overflow-y: hidden;    
 }
 
 .boton{
