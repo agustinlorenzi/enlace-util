@@ -27,7 +27,7 @@ function ItemListContainer({ greeting }) {
     <div className='fondo'>
       <p className='parrafo'>{greeting}</p>      
       <div className='control'>
-        {loading ? <h2>Cargando . . .</h2> : productos.map((prod => <p key={prod.id}>{<ItemList prod={prod} />}</p>))}
+        {loading ? <h2>Cargando . . .</h2> : productos.map((prod =><p key={prod.id}>{<ItemList prod={prod} />}</p>))}
       </div>
     </div>
   )

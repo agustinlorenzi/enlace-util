@@ -8,22 +8,18 @@ function Item({ prod }) {
 
   return (
     <div >
-      <Card className="card">
+      <Link to={`/detalle/${prod.id}`}><Card className="card">
         <Card.Img style={{ height: '18rem' }} variant="top" src={prod.foto} />
         <Card.Body className='cardBody'>
           <Card.Text>Codigo: {prod.id}.</Card.Text>
-          <Card.Title className='nombreArticulo'>{prod.nombre}.</Card.Title>          
+          <Card.Title className='nombreArticulo'>{prod.nombre}</Card.Title>
           <Card.Text>$ {prod.precio}</Card.Text>
           <Card.Text>Stock: {prod.stock}</Card.Text>
-          <Link to={`/detalle/${prod.id}`}><Button variant="primary">Ver Más</Button></Link>
+          <Button variant="primary">Ver Más</Button>
         </Card.Body>
-      </Card>
-    </div>
+      </Card></Link>
+    </div >
   )
 }
-
-//style={{ width: '18rem'}}
-
-//style={{ height: '18rem' }}
 
 export default Item      

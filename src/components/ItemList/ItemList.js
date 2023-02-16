@@ -7,8 +7,7 @@ function ItemList({prod}) {
     console.log("esto es en itemlist " + prod)
 
     return (
-        <div className='ordenCards'>
-           
+        <div className='ordenCards'>           
            <Item prod={prod}/>
         </div>
     )
