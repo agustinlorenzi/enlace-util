@@ -7,6 +7,9 @@ import "./Carrito.css";
 const Carrito = () => {
   const { cartList, eliminarItem, vaciarCarrito } = useCartContext()
 
+  // let subtotales = {cartList.map((producto => producto.subtotal)) }
+  // console.log(subtotales)
+
   if (cartList.length > 0) {
     return (
       <div>
@@ -27,26 +30,33 @@ const Carrito = () => {
             <td> {producto.nombre}</td>
             <td> {producto.cantidad}</td>
             <td> ${producto.precio}</td>
-            <td> ${(producto.precio) * (producto.cantidad)}</td>
+            {/* <td> ${(producto.precio) * (producto.cantidad)}</td> */}
+            <td> ${producto.subtotal}</td>
             <td><Button onClick={() => { eliminarItem(producto.id) }}>Eliminar</Button></td>
           </tr>
         </table>
         )}
 
+        {/* productos.map((prod =><p key={prod.id}>{<ItemList prod={prod} />}</p>))} */}
 
-        <Button onClick={() => { vaciarCarrito() }}>Vaciar Carrito</Button>
+        {/* <span>{cartList.subtotal.reduce((acumulador,elemento=>{acumulador+elemento,0}))}</span> */}
+
+        <span className='letraTotal'>Total $ {(cartList.map((producto => producto.subtotal))).reduce((acumulador, elemento) => acumulador + elemento, 0)}</span>
+        <br /><br />
+          <Button onClick={() => { vaciarCarrito() }}>Vaciar Carrito</Button>
       </div>
-    )
-  } else {
-    return (
-      <div>
-        <h1>El carro esta vacio</h1>
-        <Link to="/"><Button>Volver al catalogo</Button></Link>
-
-      </div>
-
     )
   }
+  // else {
+  return (
+    <div>
+      <h1>El carro esta vacio</h1>
+      <Link to="/"><Button>Volver al catalogo</Button></Link>
+
+    </div>
+
+  )
+  //}
 
 }
 

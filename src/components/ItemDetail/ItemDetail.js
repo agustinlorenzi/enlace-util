@@ -14,9 +14,10 @@ const ItemDetail = ({ detalleProducto }) => {
   const { addItem, cartList, faltaStock } = useCartContext()
 
   const onAdd = (cantidad) => {
+    let subtotal = precio * cantidad
     setCantidadProducto(cantidad)
     SetInputType("input")
-    addItem({ ...detalleProducto, cantidad })
+    addItem({ ...detalleProducto, cantidad, subtotal })
 
     /*let artBuscado = cartList.find((el) => el.nombre === nombre)
     if (cantidad <= (stock - artBuscado.cantidad)) {

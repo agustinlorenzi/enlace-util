@@ -17,7 +17,7 @@ const CartContextProvider = ({ children }) => {
 
     let faltaStock = ""
 
-    function addItem(item) {
+    function addItem(item) {        
         let existe = cartList.some((prod) => prod.nombre === item.nombre)
         if (existe === false) {
             setCartList([...cartList, item])
@@ -27,6 +27,7 @@ const CartContextProvider = ({ children }) => {
             if (item.cantidad <= (item.stock - artBuscado.cantidad)) {
 
                 artBuscado.cantidad = artBuscado.cantidad + item.cantidad
+                artBuscado.subtotal = artBuscado.subtotal + item.subtotal
             } else {
                 Swal.fire({
                     title: "No alcanza el stock para el agregado requerido, pruebe con una cantidad menor.",
