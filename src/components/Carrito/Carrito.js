@@ -16,23 +16,23 @@ const Carrito = () => {
         <h2 class="tituloCarro">Carrito de Compras.</h2>
         <table class="table" border="1" cellpading="0" cellspacing="0">
           <tr>
-            <th>COD.</th>
-            <th>DESCRIP.</th>
-            <th>CANT.</th>
-            <th>PRECIO</th>
-            <th>SUBT.</th>
-            <th></th>
+            <th className='celdaIndividual'>COD.</th>
+            <th className='celdaIndividual'>DESCRIP.</th>
+            <th className='celdaIndividual'>CANT.</th>
+            <th className='celdaIndividual'>PRECIO</th>
+            <th className='celdaIndividual'>SUBT.</th>
+            <th className='celdaIndividual'></th>
           </tr>
         </table>
-        {cartList.map(producto => <table class="table1" border="1" cellpading="20" cellspacing="0">
+        {cartList.map(producto => <table class="table1" border="1" cellpading="0" cellspacing="0">
           <tr>
-            <td> {producto.id}</td>
-            <td> {producto.nombre}</td>
-            <td> {producto.cantidad}</td>
-            <td> ${producto.precio}</td>
+            <td className='celdaIndividual'> {producto.id}</td>
+            <td className='celdaIndividual'> {producto.nombre}</td>
+            <td className='celdaIndividual'> {producto.cantidad}</td>
+            <td className='celdaIndividual'> ${producto.precio}</td>
             {/* <td> ${(producto.precio) * (producto.cantidad)}</td> */}
-            <td> ${producto.subtotal}</td>
-            <td><Button onClick={() => { eliminarItem(producto.id) }}>Eliminar</Button></td>
+            <td className='celdaIndividual'> ${producto.subtotal}</td>
+            <td className='celdaIndividual'><Button onClick={() => { eliminarItem(producto.id) }}>Eliminar</Button></td>
           </tr>
         </table>
         )}
