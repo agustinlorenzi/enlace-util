@@ -3,7 +3,6 @@ import { useCartContext } from '../../Context/CartContext';
 import InputCount from '../InputCount/InputCount';
 import ItemCount from '../ItemCount/ItemCount';
 import "./ItemDetail.css";
-//import Swal from "sweetalert2"
 
 const ItemDetail = ({ detalleProducto }) => {
 
@@ -18,28 +17,9 @@ const ItemDetail = ({ detalleProducto }) => {
     setCantidadProducto(cantidad)
     SetInputType("input")
     addItem({ ...detalleProducto, cantidad, subtotal })
-
-    /*let artBuscado = cartList.find((el) => el.nombre === nombre)
-    if (cantidad <= (stock - artBuscado.cantidad)) {
-      SetInputType("input")
-      addItem({ ...detalleProducto, cantidad })
-
-    } else {
-      Swal.fire({
-        title: "No alcanza el stock para el agregado requerido, pruebe con una cantidad menor.",
-        //text: `Tu pedido ingreso correctamente. Te lo enviaremos a la brevedad a ${direccion}.`,
-        width: 600,
-        //icon: "success",
-        confirmButtonText: "Aceptar",
-      });*/
-
   }
 
-
-  //};
-
   console.log(cartList)
-
   console.log(`Compraste ${cantidadProducto} unidades de este item`);
 
   return (

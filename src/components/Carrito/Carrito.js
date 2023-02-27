@@ -2,13 +2,11 @@ import React from 'react'
 import { Button } from 'react-bootstrap'
 import { Link } from 'react-router-dom';
 import { useCartContext } from '../../Context/CartContext'
+import FormularioCompra from '../FormularioCompra/FormularioCompra';
 import "./Carrito.css";
 
 const Carrito = () => {
-  const { cartList, eliminarItem, vaciarCarrito } = useCartContext()
-
-  // let subtotales = {cartList.map((producto => producto.subtotal)) }
-  // console.log(subtotales)
+  const { cartList, eliminarItem, vaciarCarrito, totalCarro } = useCartContext()
 
   if (cartList.length > 0) {
     return (
@@ -30,40 +28,31 @@ const Carrito = () => {
             <td className='celdaIndividual'> {producto.nombre}</td>
             <td className='celdaIndividual'> {producto.cantidad}</td>
             <td className='celdaIndividual'> ${producto.precio}</td>
-            {/* <td> ${(producto.precio) * (producto.cantidad)}</td> */}
             <td className='celdaIndividual'> ${producto.subtotal}</td>
             <td className='celdaIndividual'><Button onClick={() => { eliminarItem(producto.id) }}>Eliminar</Button></td>
           </tr>
         </table>
         )}
-
-        {/* productos.map((prod =><p key={prod.id}>{<ItemList prod={prod} />}</p>))} */}
-
-        {/* <span>{cartList.subtotal.reduce((acumulador,elemento=>{acumulador+elemento,0}))}</span> */}
-
-        <span className='letraTotal'>Total $ {(cartList.map((producto => producto.subtotal))).reduce((acumulador, elemento) => acumulador + elemento, 0)}</span>
+        <span className='letraTotal'>Total $ {totalCarro()}</span>
+        <br></br>
+        <Button onClick={() => { vaciarCarrito() }}>Vaciar Carrito</Button>
         <br /><br />
-          <Button onClick={() => { vaciarCarrito() }}>Vaciar Carrito</Button>
+        <FormularioCompra />
+        
+        
+
       </div>
     )
   }
-  // else {
+
   return (
     <div>
       <h1>El carro esta vacio</h1>
       <Link to="/"><Button>Volver al catalogo</Button></Link>
 
+
     </div>
-
   )
-  //}
-
 }
 
-
-
 export default Carrito
-//{inputType === "button" ? <ItemCount initial={1} stock={stock} onAdd={onAdd} /> : <InputCount />}
-//const total = numeros.reduce((acumulador , elemento) => acumulador + elemento, 0)
-
-//<li>{producto.nombre} - {producto.cantidad} unidades - Precio Unitario $ {producto.precio} - Subtotal ${(producto.precio) * (producto.cantidad)}<Button onClick={() => {eliminarItem(producto.id)}}>Eliminar</Button></li>
