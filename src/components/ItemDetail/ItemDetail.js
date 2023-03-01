@@ -7,20 +7,20 @@ import "./ItemDetail.css";
 const ItemDetail = ({ detalleProducto }) => {
 
   const { id, categoria, nombre, descripcion, stock, precio, foto } = detalleProducto;
-  const [cantidadProducto, setCantidadProducto] = useState()
+  //const [cantidadProducto, setCantidadProducto] = useState()
   const [inputType, SetInputType] = useState("button")
 
-  const { addItem, cartList, faltaStock } = useCartContext()
+  const { addItem } = useCartContext()
 
   const onAdd = (cantidad) => {
     let subtotal = precio * cantidad
-    setCantidadProducto(cantidad)
+    //setCantidadProducto(cantidad)
     SetInputType("input")
     addItem({ ...detalleProducto, cantidad, subtotal })
   }
 
-  console.log(cartList)
-  console.log(`Compraste ${cantidadProducto} unidades de este item`);
+  //console.log(cartList)
+ // console.log(`Compraste ${cantidadProducto} unidades de este item`);
 
   return (
     <div className='itemDetail'  >
@@ -32,7 +32,7 @@ const ItemDetail = ({ detalleProducto }) => {
         <p>Stock: {stock}</p>
         <h3 className='sacar'>${precio}</h3>
         <p>Categoria: {categoria}.</p>
-        <span className='display'>{faltaStock}</span>
+        {/* <span className='display'>{faltaStock}</span> */}
         {inputType === "button" ? <ItemCount initial={1} stock={stock} onAdd={onAdd} /> : <InputCount />}
       </div>
     </div>

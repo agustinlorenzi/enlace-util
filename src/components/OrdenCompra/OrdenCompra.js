@@ -12,24 +12,12 @@ const OrdenCompra = ({ dataForm }) => {
   function OrdenCompra() {
     const db = getFirestore()
 
-    cartList.forEach((art) => {
-      /*const dbQuery = doc(db, "articulos", `${art.id}`)
-      getDoc(dbQuery)
-        .then((res) => {
-          articulo = res;
-
-        });*/
-
+    cartList.forEach((art) => {  
       const queryItem = doc(db, "articulos", `${art.id}`)
-      updateDoc(queryItem, { stock: 2})
-
-
+      updateDoc(queryItem, { stock: (art.stock - art.cantidad)})
     })
 
-
-
     let orden = {}
-
     //datos comprador
     orden.buyer = { nombre: `${dataForm.nombre}`, phone: `${dataForm.phone}`, email: `${dataForm.email} ` }
     console.log("objeto en orden de compra " + orden.buyer.nombre)

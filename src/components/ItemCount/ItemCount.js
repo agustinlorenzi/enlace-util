@@ -16,16 +16,27 @@ function ItemCount({stock, initial, onAdd}) {
         }
     } 
 
-    return (
+    if(stock > 0){
+        return (
+            <div>
+                <div className='fondoControl'>
+                    <button className='control' onClick={restar}>-</button>
+                    <span className='display'>{count}</span>
+                    <button className='control' onClick={sumar}>+</button>
+                </div>          
+                <button className='boton' onClick={() => {onAdd(count)}}>Agregar al carrito</button>
+            </div>
+        );
+
+
+    }
+    return(
         <div>
-            <div className='fondoControl'>
-                <button className='control' onClick={restar}>-</button>
-                <span className='display'>{count}</span>
-                <button className='control' onClick={sumar}>+</button>
-            </div>          
-            <button className='boton' onClick={() => {onAdd(count)}}>Agregar al carrito</button>
+            <h3>No hay Stock de este producto.</h3>
         </div>
-    );
+    )
+
+    
 };
 
 export default ItemCount
