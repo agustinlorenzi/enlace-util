@@ -11,14 +11,15 @@ function CartWidget() {
   if (cartList.length > 0) {
     return (
       <div className='carrito'>
-        <p className='circulo'>{(cartList.map((producto => producto.cantidad))).reduce((acumulador, elemento) => acumulador + elemento, 0)}</p>
-        <Link to="/carrito"><h1 ><BiCartAlt className='simboloCarrito' /></h1></Link>
+        <span className='circulo'>{(cartList.map((producto => producto.cantidad))).reduce((acumulador, elemento) => acumulador + elemento, 0)}</span>
+        <Link to="/carrito"><h1><BiCartAlt className='simboloCarrito' /></h1></Link>
       </div>
     )
   }
+
   return (
     <div>
-      <Link to="/carrito"><h1 ><BiCartAlt className='simboloCarrito' /></h1></Link>
+      <Link to="/carrito"><h1><BiCartAlt className='simboloCarrito' /></h1></Link>
     </div>
   )
 }

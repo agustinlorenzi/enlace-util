@@ -28,15 +28,13 @@ function ItemCount({stock, initial, onAdd}) {
             </div>
         );
 
-
     }
+    
     return(
         <div>
             <h3>No hay Stock de este producto.</h3>
         </div>
-    )
-
-    
+    )    
 };
 
 export default ItemCount

@@ -6,8 +6,7 @@ export const useCartContext = () => useContext(CartContext)
 
 const CartContextProvider = ({ children }) => {
     const [cartList, setCartList] = useState([])
-    //const [faltaStock, setFaltaStock] = useState("")
-   // let faltaStock = ""
+   
     function addItem(item) {        
         let existe = cartList.some((prod) => prod.nombre === item.nombre)
         if (existe === false) {
@@ -40,8 +39,7 @@ const CartContextProvider = ({ children }) => {
     }    
 
     return (
-        <CartContext.Provider value={{ cartList, addItem, eliminarItem, vaciarCarrito, totalCarro}}>
-            {/* faltaStock */}
+        <CartContext.Provider value={{ cartList, addItem, eliminarItem, vaciarCarrito, totalCarro}}>           
             {children}
         </CartContext.Provider>
     )

@@ -21,7 +21,6 @@ function App() {
             <Route path="/categoria/:categoriaId" element={<ItemListContainer greeting={parrafo} />} />
             <Route path="/carrito" element={<Carrito />} />
             <Route path="/*" element={<Navigate to="/" />} />
-
           </Routes>
         </div>
       </CartContextProvider>

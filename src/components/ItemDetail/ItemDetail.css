@@ -29,15 +29,11 @@
         height: 70vh;
         margin: 40px;
         padding: 20px;
-
     }
 
     .itemDetail img{
         width: 35vw;
         height: auto;
-        padding-right: 50px;
-        
-        
-        
+        padding-right: 50px;        
     }
 }

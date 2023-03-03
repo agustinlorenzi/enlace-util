@@ -13,9 +13,10 @@ function NavBar() {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse className="justify-content-end" id="basic-navbar-nav">
                     <Nav className="ml-auto">
+                        <NavLink to='/' className='item-navbar'><span >Inicio</span></NavLink>
                         <NavLink to='/categoria/adhesivos' className='item-navbar'><span >Adhesivos</span></NavLink>
                         <NavLink to='/categoria/lapices' className='item-navbar'><span >Lapices</span></NavLink>
-                        <NavLink to='/categoria/marcadores' className='item-navbar'><span >Marcadores</span></NavLink>                    
+                        <NavLink to='/categoria/marcadores' className='item-navbar'><span >Marcadores</span></NavLink>
                         <div >
                             <div>
                                 <CartWidget />
