@@ -34,6 +34,8 @@ Tambien las ordenes de compra de los clientes. Cada vez que se confirma una orde
 * Busque modularizar lo mas coherentemente la aplicación entre distintos componente padres e hijos para que cada uno tenga una tarea bien definida. 
 * Use distintos tipos de hook para hacer persistentes datos, traer información y renderizar ciertos elementos
 en ciertos momentos definidos.
+* Se usa Intercambiabilidad para cambiar de botones en el detalle del carrito. Cuando se presiona "Agregar al carrito", este boton desaparece y en su lugar aparecen dos botones, "Terminar Compra" y "Seguir Comprando",
+que permite facilmente al usuario tomar una desición hacia que camino seguir.
 * Cree un contexto (CartContext.js) para incluir en el funciones que iban a usarse por varios componentes.
 * Se utilizaron todas las funciones necesarias para la conformación y manipulación del carro de compras como: 
   - Agregar cantidades de productos calculando subtotales y totales.
@@ -41,6 +43,11 @@ en ciertos momentos definidos.
   - Confirmar la compra, guardarla en Firebase y descontar el stock que luego se actualizara en la app.
   - Agregar Stock en el carro de un mismo producto, pero controlando que no se pase el agregado y lo ya puesto del
   stock existente.
+  - El circulo del simbolo del carrito desaparece cuando el carrito esta vacio o en cero, y aparece con el numero
+  de items sumados en cantidad total cuando el usuario compra algo.
+* Se agrego un componente Loader para avisar al usuario de las esperas en la carga de productos.
+* El Navbar se encuentra en una posición muy convenientemente ubicado en la parte superior, peromitiendo el acceso
+claro a todos los sectores de la app.
 
  
 
