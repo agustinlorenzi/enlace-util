@@ -20,8 +20,9 @@ const Carrito = () => {
   }
 
   return (
-    <div>
-      <h1>El carro esta vacio</h1>
+    <div className='carritoVacio'>
+      <h1>El carro esta vacio.</h1>
+      <br></br>
       <Link to="/"><Button>Volver al catalogo</Button></Link>
     </div>
   )

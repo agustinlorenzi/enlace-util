@@ -1,3 +1,51 @@
+# Ecommerce de Libreria llamado ENLACE ÚTIL.
+#### Creado por Agustin Lorenzi.
+
+LINK AL REPOSITORIO : https://github.com/agustinlorenzi/enlace-util
+LINK AL DEPLOY: https://keen-cranachan-ce8048.netlify.app/
+
+## Explicación del Proyecto.
+
+Se trata de una tienda de libreria virtual, la misma cuenta con un catalogo de productos que puede verse completo
+o filtrado por categorias. Como asi tambien cada producto puede observarse en mas detalle para luego ser agregado
+en el carrito de compras en la cantidad que el usuario desee y el stock permita.
+Ya sea al catalogo, las categorias o el carrito se puede acceder en cualquier momento en el trayecto de la compra.
+En el carrito de compra puede observarse cada item elegido con su cantidad, subtotal y el total de la compra. Como
+asi tambien un Formulario para que el usuario pueda completar sus datos, confirmar estos y luego la compra.
+
+## Instalaciones para el Proyecto.
+
+### En la creación del proyecto.
+
+En primera medida para su creación, abri la carpeta del proyecto en el Visual Studio Code e instale React con 
+npx create-react-app enlace-util.
+
+### Durante el desarrollo del proyecto.
+
+* npm install react-router-dom, para organizar el enrrutado en mi app.
+* npm install react-bootstrap bootstrap para darle estilo al proyecto. Tambien use piezas claves de esta libreria tales como: Navbar, Card, Botones, etc.
+* npm install sweetalert2 para los alert personalizados, en los que se les avisa al usuario que sucede a partir de
+ciertas acciones de este.
+* npm install firebase, usado como base de datos, para guardar los productos con todas sus caracteristicas y stock.
+Tambien las ordenes de compra de los clientes. Cada vez que se confirma una orden de compra el stock se actualiza en la SPA.
+
+## Lo que se hizo durante el proceso de construcción de la SPA.
+
+* Busque modularizar lo mas coherentemente la aplicación entre distintos componente padres e hijos para que cada uno tenga una tarea bien definida. 
+* Use distintos tipos de hook para hacer persistentes datos, traer información y renderizar ciertos elementos
+en ciertos momentos definidos.
+* Cree un contexto (CartContext.js) para incluir en el funciones que iban a usarse por varios componentes.
+* Se utilizaron todas las funciones necesarias para la conformación y manipulación del carro de compras como: 
+  - Agregar cantidades de productos calculando subtotales y totales.
+  - Se puede eliminar productos individualmente o vaciar todo el carro.
+  - Confirmar la compra, guardarla en Firebase y descontar el stock que luego se actualizara en la app.
+  - Agregar Stock en el carro de un mismo producto, pero controlando que no se pase el agregado y lo ya puesto del
+  stock existente.
+
+ 
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

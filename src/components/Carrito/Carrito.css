@@ -47,3 +47,12 @@
     font-size: 30px;
     font-weight: bolder;
 }
+
+.carritoVacio{
+    margin: 40px;
+   
+}
+
+h1{
+    overflow-y: hidden;
+}
