@@ -1,8 +1,8 @@
 # Ecommerce de Libreria llamado ENLACE ÚTIL.
 #### Creado por Agustin Lorenzi.
 
-LINK AL REPOSITORIO : https://github.com/agustinlorenzi/enlace-util
-LINK AL DEPLOY: https://keen-cranachan-ce8048.netlify.app/
+* LINK AL REPOSITORIO : https://github.com/agustinlorenzi/enlace-util
+* LINK AL DEPLOY: https://keen-cranachan-ce8048.netlify.app/
 
 ## Explicación del Proyecto.
 
