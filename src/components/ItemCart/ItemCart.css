@@ -59,7 +59,10 @@
     font-size: 30px;
     font-weight: bolder;
 }
+   
 
 .tituloCarro{
     overflow-y: hidden;
+    margin: 20px;
 }
+

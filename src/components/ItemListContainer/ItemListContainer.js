@@ -16,23 +16,25 @@ function ItemListContainer({ greeting }) {
     if (categoriaId) {
       const queryCollectionFilter = query(queryCollection, where("categoria", "==", `${categoriaId}`))
       getDocs(queryCollectionFilter)
-      .then(resp => setProductos(resp.docs.map(articulo => ({ id: articulo.id, ...articulo.data() }))))
-      .catch((err) => console.log(err))
-      .finally(() => setLoading(false))
+        .then(resp => setProductos(resp.docs.map(articulo => ({ id: articulo.id, ...articulo.data() }))))
+        .catch((err) => console.log(err))
+        .finally(() => setLoading(false))
     } else {
       const queryCollection = collection(db, "articulos")
       getDocs(queryCollection)
-      .then(resp => setProductos(resp.docs.map(articulo => ({ id: articulo.id, ...articulo.data() }))))
-      .catch((err) => console.log(err))
-      .finally(() => setLoading(false))
+        .then(resp => setProductos(resp.docs.map(articulo => ({ id: articulo.id, ...articulo.data() }))))
+        .catch((err) => console.log(err))
+        .finally(() => setLoading(false))
     }
   }, [categoriaId])
 
   return (
     <div className='fondo'>
-      <p className='parrafo'>{greeting}</p>
+      <div>
+        <p className='parrafo'>{greeting}</p>
+      </div>
       <div className='control'>
-        {loading ? <Loader /> : productos.map((prod => <p key={prod.id}>{<ItemList prod={prod} />}</p>))}
+        {loading ? <Loader /> : productos.map((prod => <div key={prod.id}>{<ItemList prod={prod} />}</div>))}
       </div>
     </div>
   )

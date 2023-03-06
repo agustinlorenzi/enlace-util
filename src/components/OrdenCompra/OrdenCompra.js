@@ -2,6 +2,7 @@ import { useCartContext } from '../../Context/CartContext'
 import { getFirestore, collection, addDoc, updateDoc, doc } from "firebase/firestore"
 import { Button } from 'react-bootstrap'
 import Swal from "sweetalert2"
+import "./OrdenCompra.css";
 
 const OrdenCompra = ({ dataForm }) => {  
 
@@ -63,7 +64,7 @@ const OrdenCompra = ({ dataForm }) => {
 
   return (
     <div>
-      <Button onClick={() => OrdenCompra()}>Confirmar Pedido</Button>
+      <Button className='botonOrdenCompra' onClick={() => OrdenCompra()}>Confirmar Pedido</Button>
     </div>
   )
 }

@@ -1,0 +1,17 @@
+h2{
+    overflow-y: hidden;
+}
+
+.botonFormulario{
+    margin-bottom: 20px;
+}
+
+.inputFormulario{
+    margin-top: 40px;
+}
+
+.inputF{
+    margin: 10px;
+    width: 30vw;
+
+}

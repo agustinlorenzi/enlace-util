@@ -14,7 +14,6 @@ const Carrito = () => {
     return (
       <div>
         <ItemCart />
-        <br /><br />
         <FormularioCompra />
       </div>
     )

@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Button } from 'react-bootstrap'
 import OrdenCompra from '../OrdenCompra/OrdenCompra'
+import "./FormularioCompra.css";
 
 const FormularioCompra = () => {    
     const [dataForm, setDataForm] = useState({ nombre: "", phone: "", email: "" })
@@ -27,18 +28,17 @@ const FormularioCompra = () => {
     return (
         <div>
             {input === "button" ?
-                <div>
-                    <h2>Por Favor complete sus datos de contacto.</h2>
+                <div className='inputFormulario'>
+                    <h2>Por Favor complete sus datos de contacto.</h2>                    
+                    <input className='inputF' type="text" name="nombre" value={dataForm.nombre} onChange={tomarInput} placeholder="Nombre Completo" />
                     <br></br>
-                    <input type="text" name="nombre" value={dataForm.nombre} onChange={tomarInput} placeholder="nombre" />
+                    <input className='inputF' type="number" name="phone" value={dataForm.phone} onChange={tomarInput} placeholder="Telefono" />
                     <br></br>
-                    <input type="number" name="phone" value={dataForm.phone} onChange={tomarInput} placeholder="telefono" />
-                    <br></br>
-                    <input type="text" name="email" value={dataForm.email} onChange={tomarInput} placeholder="email" />
+                    <input className='inputF' type="text" name="email" value={dataForm.email} onChange={tomarInput} placeholder="Email" />
                     <br></br>
                     {aviso}
                     <br></br>
-                    <Button onClick={()=>corroborarDatos()}>Confirmar Datos</Button>
+                    <Button className='botonFormulario' onClick={()=>corroborarDatos()}>Confirmar Datos</Button>
                 </div> :
                 <OrdenCompra dataForm={dataForm}/>                
             }
