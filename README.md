@@ -24,7 +24,7 @@ npx create-react-app enlace-util.
 
 * npm install react-router-dom, para organizar el enrrutado en mi app.
 * npm install react-bootstrap bootstrap para darle estilo al proyecto. Tambien use piezas claves de esta libreria tales como: Navbar, Card, Botones, etc.
-* npm install sweetalert2 para los alert personalizados, en los que se les avisa al usuario que sucede a partir de
+* npm install sweetalert2 para los alert personalizados, en los que les aviso al usuario que sucede a partir de
 ciertas acciones de este.
 * npm install firebase, usado como base de datos, para guardar los productos con todas sus caracteristicas y stock.
 Tambien las ordenes de compra de los clientes. Cada vez que se confirma una orden de compra el stock se actualiza en la SPA.
@@ -43,13 +43,12 @@ que permite facilmente al usuario tomar una desición hacia que camino seguir.
   - Confirmar la compra, guardarla en Firebase y descontar el stock que luego se actualizara en la app.
   - Agregar Stock en el carro de un mismo producto, pero controlando que no se pase el agregado y lo ya puesto del
   stock existente.
+  - Hay un boton que permite retornar al catalogo en cualquier momento.
   - El circulo del simbolo del carrito desaparece cuando el carrito esta vacio o en cero, y aparece con el numero
   de items sumados en cantidad total cuando el usuario compra algo.
-* Se agrego un componente Loader para avisar al usuario de las esperas en la carga de productos.
+* Agregue un componente Loader para avisar al usuario de las esperas en la carga de productos.
 * El Navbar se encuentra en una posición muy convenientemente ubicado en la parte superior, peromitiendo el acceso
-claro a todos los sectores de la app.
-
- 
+claro a todos los sectores de la app. 
 
 
 
